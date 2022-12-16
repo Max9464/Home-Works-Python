@@ -3,6 +3,12 @@
 # 6782 -> 23
 # 0,56 -> 11
 
+number = int(input("Hi input a number: "))
+sum = 0
+while number != 0:
+    sum = (number % 10) + sum
+    number//=10
+print(sum)
 
 
 
