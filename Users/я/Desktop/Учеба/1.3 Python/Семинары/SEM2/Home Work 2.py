@@ -3,34 +3,31 @@
 # 6782 -> 23
 # 0,56 -> 11
 
-number = int(input("Hi input a number: "))
+number = int(input('Введите число: '))
 sum = 0
 while number != 0:
     sum = (number % 10) + sum
-    number//=10
+    number //= 10
 print(sum)
-
-
-
-
-
-
-
-
 
 # 2.Задайте список из n чисел последовательности (1 + 1/n)^n, выведеите его на экран, а так же сумму элементов списка.
 # Пример:
 # Для n=4 -> [2, 2.25, 2.37, 2.44]
 # Сумма 9.06
 
-
-
-
-
-
-
+# n=int(input('Input n: '))
+# any_lists = [round((1+1/i)**i, 3) for i in range(1, 1+n)]
+# print(f'Последовательность чисел: {any_lists} \nСумма: {round(sum(any_lists), 3)}')
 
 
 
 # 3.Реализуйте алгоритм перемешивания списка. НЕ ИСПОЛЬЗОВАТЬ ВСТРОЕННЫЕ БИБЛИОТЕКИ SHUFFLE,
 # максимум использование библиотеки Random для и получения случайного int
+
+# nums =['apple','orange','bannano','mandaryn','avokado']
+# for num in nums:
+#     print(num)
+# print()
+
+
+
