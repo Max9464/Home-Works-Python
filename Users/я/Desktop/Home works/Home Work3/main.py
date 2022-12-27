@@ -21,19 +21,7 @@
 # [2, 3, 5, 6] => [12, 15]
 
 
-# list = [2,3,4,2,4,5]
-# list2 = []
-# list3 = []
-#
-# for i in range(len(list)):
-#     while i < len(list2)/2 and list > len(list2)/2:
-#         list = list - 1
-#         a = list2[i] * list2[list]
-#         list3.append(a)
-#         i += 1
-#
-# print(list2)
-# print(list3)
+
 # from random import randint
 #
 #
