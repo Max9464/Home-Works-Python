@@ -25,7 +25,7 @@ while True:
     if count <= 0:
         print('\n<<---------->> YOU WINNER! <<----------->> ')
         break
-    print('----------------<< ' + str(count) + ' >>----------------')
+    print('\n----------------<< ' + str(count) + ' >>----------------')
     print('\n------------<< Next Player >>------------')
     player_2 = int(input('Take you candy from 1 to 28: '))
     while player_2 > 28:
@@ -36,5 +36,5 @@ while True:
     if count <= 0:
         print('\n<<---------->> YOU WINNER! <<----------->> ')
         break
-    print('----------------<< ' + str(count) + ' >>----------------')
+    print('\n----------------<< ' + str(count) + ' >>----------------')
     print('\n------------<< Next Player >>------------')
