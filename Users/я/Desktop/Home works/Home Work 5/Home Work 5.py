@@ -10,9 +10,9 @@ name_player = input('\nWhat is you name? ')
 print("\n      let's figte " + name_player.upper()+'!')
 bot = 'CANDY KILLER'
 
-players_random = bot, name_player.upper()
+players_random = bot, name_player
 ho_is_first = random.choice(players_random)
-start_number = randint(50, 100)
+start_number = randint(100, 300)
 
 
 print('\n' + ho_is_first.upper() + ' is First!')
@@ -25,6 +25,7 @@ if ho_is_first == bot:
     start_number = count
     print('\n----------------<< ' + str(count) + ' >>----------------')
     print('\nNext Player: ' + name_player.upper())
+
     while True:
         player_2 = int(input(name_player.upper() + ' Take you candy from 1 to 28: '))
         while player_2 > 28:
@@ -41,6 +42,7 @@ if ho_is_first == bot:
         print('\nNext Player: ' + bot)
 
         bot_hod = randint(1, 28)
+        print('CANDY KILLER: -' + str(bot_hod))
         count = start_number - bot_hod
         start_number = count
         if count <= 0:
@@ -52,7 +54,6 @@ if ho_is_first == bot:
         print('\nNext Player: ' + name_player.upper())
 
 else:
-    #ho_is_first == name_player:
     player_2 = int(input(name_player.upper() + ' Take you candy from 1 to 28: '))
     while player_2 > 28:
         print('--------------- ERROR! ---------------- ')
@@ -73,7 +74,7 @@ else:
             print('\n<<---------->> YOU WINNER! <<----------->> ')
             break
         print('\n----------------<< ' + str(count) + ' >>----------------')
-        print('\nNext Player: ' + name_player)
+        print('\nNext Player: ' + name_player.upper())
 
         player_2 = int(input(name_player.upper() + ' Take you candy from 1 to 28: '))
         while player_2 > 28:
