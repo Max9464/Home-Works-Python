@@ -4,37 +4,84 @@ import random
 print('\n-----<<Hi this is candy game!>>-----' +
       '\nTake you candy and Winn,' + '\nHo is take last candy'+'\n-----------<<CANDY KING!>>----------')
 
-first_player = input('1st player' + '\nHi, enter you name: ')
-second_player = input('\n2st player' + '\nHi, enter you name: ')
+print("\n Hi, may name is CANDY KILLER let's figte! ")
+bot = 'CANDY KILLER'
+name_player = input('\n2st player' + '\nHi, enter you name: ')
 
-players_random = first_player.title(), second_player.title()
+players_random = bot, name_player.upper()
 ho_is_first = random.choice(players_random)
-start_number = randint(87, 1000)
+start_number = randint(50, 100)
 
 
 print('\n' + ho_is_first.upper() + ' is First!')
 print('This is start Number: ' + str(start_number))
 
-
-while True:
-    player_1 = int(input('Take you candy from 1 to 28: '))
-    while player_1 > 28:
-        print('--------------- ERROR! ---------------- ')
-        player_1 = int(input('Take candy from 1 to 28: '))
-    count = start_number - player_1
-    if count <= 0:
-        print('\n<<---------->> YOU WINNER! <<----------->> ')
-        break
-    print('\n----------------<< ' + str(count) + ' >>----------------')
-    print('\n------------<< Next Player >>------------')
-    player_2 = int(input('Take you candy from 1 to 28: '))
-    while player_2 > 28:
-        print('--------------- ERROR! ---------------- ')
-        player_2 = int(input('Take candy from 1 to 28: '))
-    count = count - player_2
+if ho_is_first == bot:
+    bot_hod = randint(1, 28)
+    print('CANDY KILLER: -'+str(bot_hod))
+    count = start_number - bot_hod
     start_number = count
-    if count <= 0:
-        print('\n<<---------->> YOU WINNER! <<----------->> ')
-        break
     print('\n----------------<< ' + str(count) + ' >>----------------')
-    print('\n------------<< Next Player >>------------')
+    print('\n Next Player: ' + name_player.upper())
+    while True:
+        player_2 = int(input(name_player.upper() + ' Take you candy from 1 to 28: '))
+        while player_2 > 28:
+            print('--------------- ERROR! ---------------- ')
+            player_2 = int(input('Take candy from 1 to 28: '))
+        count = start_number - player_2
+        start_number = count
+        if count <= 0:
+            print('')
+            ('               ' + str(name_player.upper()))
+            print('\n<<---------->> YOU WINNER! <<----------->> ')
+            break
+        print('\n----------------<< ' + str(count) + ' >>----------------')
+        print('\n Next Player: ' + bot)
+
+        bot_hod = randint(1, 28)
+        count = start_number - bot_hod
+        start_number = count
+        if count <= 0:
+            print('')
+            print('              ' + str(bot))
+            print('\n<<---------->> YOU WINNER! <<----------->> ')
+            break
+        print('\n----------------<< ' + str(count) + ' >>----------------')
+        print('\n Next Player: ' + name_player.upper())
+
+    if ho_is_first == name_player:
+        player_2 = int(input(name_player.upper() + ' Take you candy from 1 to 28: '))
+        while player_2 > 28:
+            print('--------------- ERROR! ---------------- ')
+            player_2 = int(input('Take candy from 1 to 28: '))
+        count = int(start_number) - player_2
+        start_number = count
+        print('\n----------------<< ' + str(count) + ' >>----------------')
+        print('\n Next Player: ' + bot)
+
+        while True:
+            bot_hod = randint(1, 28)
+            print('CANDY KILLER: -' + str(bot_hod))
+            count = start_number - bot_hod
+            start_number = count
+            if count <= 0:
+                print('')
+                print('              ' + str(bot))
+                print('\n<<---------->> YOU WINNER! <<----------->> ')
+                break
+            print('\n----------------<< ' + str(count) + ' >>----------------')
+            print('\n Next Player: ' + name_player)
+
+            player_2 = int(input(name_player.upper() + ' Take you candy from 1 to 28: '))
+            while player_2 > 28:
+                print('--------------- ERROR! ---------------- ')
+                player_2 = int(input('Take candy from 1 to 28: '))
+            count = start_number - player_2
+            start_number = count
+            if count <= 0:
+                print('')
+                ('                 ' + str(name_player))
+                print('\n<<---------->> YOU WINNER! <<----------->> ')
+                break
+            print('\n----------------<< ' + str(count) + ' >>----------------')
+            print('\n Next Player: ' + bot)
